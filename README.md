@@ -4,4 +4,4 @@ This repository provides a high-level breakdown of web application development i
 
 ## Steps
 
-Go to the ``Development guide folder`` and read the development guide to understand the development process. 
+Go to the ``Development-guide`` folder and read the development guide to understand the development process. 
