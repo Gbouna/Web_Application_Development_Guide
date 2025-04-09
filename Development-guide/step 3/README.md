@@ -261,7 +261,7 @@ Below are two different approaches—**SQL Database** or **Cosmos DB**.
     * Choose your preferred method:
         * **GitHub** → connect your repo and branch.
         * **Local Git** → push from your local machine.
-        * **ZIP Deploy** → manually upload your project as a .zip.
+        * **ZIP Deploy** → manually upload your project as a `.zip`.
 4.  **Configure Application Settings**
     * Still in your App Service, go to **Settings** → **Configuration** → **Application Settings**.
     * Add your environment variables (e.g., `SQL_CONNECTION_STRING`, `BLOB_CONNECTION_STRING`, `COSMOS_ENDPOINT`, etc.) so your app can read them securely.
