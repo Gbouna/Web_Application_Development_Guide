@@ -1,4 +1,4 @@
-Below is a **step-by-step, beginner-friendly guide** for building and deploying a basic RESTful API on Azure. The API will connect to the **Database** and **Storage** you set up in Step 3, enabling your application to perform CRUD (Create, Read, Update, Delete) operations on media metadata and user data, as well as handle file uploads to Blob Storage.
+Below is a **step-by-step guide** for building and deploying a basic RESTful API on Azure. The API will connect to the **Database** and **Storage** you set up in Step 2, enabling your application to perform CRUD (Create, Read, Update, Delete) operations on media metadata and user data, as well as handle file uploads to Blob Storage.
 
 ---
 
