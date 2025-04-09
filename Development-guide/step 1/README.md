@@ -1,15 +1,15 @@
 # Azure Resource Setup Guide
 
-Below is a **step-by-step manual** for setting up Azure resources in a way that is approachable for anyone—especially those new to cloud computing. The goal is to get you from "no Azure resources" to a well-organized environment where you can deploy your application.
+Below is a **step-by-step manual** for setting up Azure resources.
 
 ---
 
 ## Step 0: **Prerequisites**
 
 1. **Azure for Students Subscription**  
-   - Sign up for an [Azure for Students](https://azure.microsoft.com/free/students/) account if available in your country/region.  
+   - Sign up for an [Azure for Students](https://azure.microsoft.com/free/students/) account if you have not already done it.  
    - This typically gives you credits to use Azure services without needing a credit card, plus free-tier services.  
-   - If Azure for Students is not available, create a regular free Azure account instead.
+   - If your credit is finished, create a regular free Azure account instead.
 
 2. **Azure Portal Access**  
    - Ensure you can log into the [Azure Portal](https://portal.azure.com). This is where you'll manage your resources.
