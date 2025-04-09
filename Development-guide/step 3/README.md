@@ -274,3 +274,51 @@ Below are two different approaches—**SQL Database** or **Cosmos DB**.
 "scripts": {
   "start": "node index.js"
 }
+```
+So Azure knows how to run your app.
+
+
+## Part G: **Basic Security & Error Handling**
+
+1.  **Error Handling**
+    * For each route, use `try/catch` blocks to handle potential errors.
+    * Send appropriate HTTP status codes (e.g., `400` for bad requests, `404` for not found, `500` for server errors).
+
+2.  **Roles & Authorization**
+    * If you plan to restrict certain endpoints to “creator” users, integrate an **authentication** system next (Step 5 in the big picture).
+    * You could use **Azure AD B2C** or a simple JWT-based system.
+
+3.  **Input Validation**
+    * Validate request data to prevent invalid or malicious input (e.g., using libraries like `express-validator` or your own checks).
+
+---
+
+## Part H: **Testing & Troubleshooting**
+
+1.  **Check Logs**
+    * In the Azure Portal, go to **App Service** → **Log Stream** to see live logs or enable **Application Insights** for more detailed telemetry.
+2.  **Use a Tool like Postman**
+    * Verify each endpoint is reachable and returns the correct data or file.
+3.  **Database Permissions**
+    * If you get a connection error, check your firewall settings in Azure SQL or your Cosmos DB “Keys” correctness.
+
+---
+
+### Final Recap
+
+After completing these steps, you will have:
+
+1.  **A local (or cloud-deployed) Node.js/Express API** that can:
+    * Connect to Azure SQL or Cosmos DB to read/write your media metadata, user info, comments, etc.
+    * Upload files to Azure Blob Storage and return the file URL.
+2.  **Endpoints** to handle:
+    * **Media**: GET, POST, maybe PUT/DELETE.
+    * **File Upload**: Using a dedicated endpoint.
+    * Additional endpoints (e.g., comments, ratings) as needed.
+3.  **Deployment** to an **Azure App Service** (basic free/low-tier plan), accessible by a public URL.
+
+**Next Steps**:
+* Implement **Authentication** and **Authorization** (Step 5), ensuring only creators can upload, while everyone can view.
+* Build a **Front-End** to call these REST endpoints (Step 6).
+
+**Congratulations!** You’ve built and deployed a simple RESTful API for your cloud-native photo/video sharing application.
