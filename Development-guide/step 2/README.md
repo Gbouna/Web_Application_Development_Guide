@@ -196,6 +196,6 @@ By completing these steps, you should have:
 2. **Blob Storage** ready to handle large files (photos or videos).  
 3. **Connection Strings** that your API can use to read/write data securely.  
 
-**Next Steps**: Move on to building your RESTful API (Step 4). You'll use the connection strings from your database and storage account to enable create/read/update/delete (CRUD) operations for your media data and handle file uploads/downloads.
+**Next Steps**: Move on to building your RESTful API (Step 3). You'll use the connection strings from your database and storage account to enable create/read/update/delete (CRUD) operations for your media data and handle file uploads/downloads.
 
 ---
