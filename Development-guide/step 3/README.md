@@ -318,7 +318,5 @@ After completing these steps, you will have:
 3.  **Deployment** to an **Azure App Service** (basic free/low-tier plan), accessible by a public URL.
 
 **Next Steps**:
-* Implement **Authentication** and **Authorization** (Step 5), ensuring only creators can upload, while everyone can view.
-* Build a **Front-End** to call these REST endpoints (Step 6).
-
-**Congratulations!** You’ve built and deployed a simple RESTful API for your cloud-native photo/video sharing application.
+* Implement **Authentication** and **Authorization** (Step 4), ensuring only creators can upload, while everyone can view.
+* Build a **Front-End** to call these REST endpoints (Step 5).
