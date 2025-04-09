@@ -1,6 +1,6 @@
 # Database and Storage Setup for Photo/Video Sharing App
 
-Below is a **practical, step-by-step guide** for setting up your **database** and **storage** on Azure for the photo/video sharing application. This guide assumes you have already completed or are familiar with **Step 2 (Setting Up Azure Resources)**—meaning you have a resource group and Azure services ready.
+Below is a **practical, step-by-step guide** for setting up your **database** and **storage** on Azure for the photo/video sharing application. This guide assumes you have already completed or are familiar with **Step 1 (Setting Up Azure Resources)**—meaning you have a resource group and Azure services ready.
 
 ---
 
