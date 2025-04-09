@@ -8,13 +8,14 @@ Below is a **step-by-step manual** for setting up Azure resources.
 
 1. **Azure for Students Subscription**  
    - Sign up for an [Azure for Students](https://azure.microsoft.com/free/students/) account if you have not already done it.  
-   - This typically gives you credits to use Azure services without needing a credit card, plus free-tier services.  
+   - This typically gives you credits to use Azure services, plus free-tier services.  
    - If your credit is finished, create a regular free Azure account instead.
 
 2. **Azure Portal Access**  
    - Ensure you can log into the [Azure Portal](https://portal.azure.com). This is where you'll manage your resources.
 
 > **Note**: The steps below apply to the Azure Portal's web interface. The layout might occasionally change, but the process should be similar.
+> We covered most of the steps here during our seminar. Please check out the related seminar materials for further guidance. 
 
 ---
 
