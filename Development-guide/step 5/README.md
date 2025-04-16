@@ -1,4 +1,6 @@
-Below is a **step-by-step, beginner-friendly guide** for building the front-end (both **Consumer** and **Creator** views) for your cloud-native photo/video sharing application. The goal is to keep it as straightforward as possible, using **basic HTML, CSS, and JavaScript**—so you don’t need a deep technical background or complicated frameworks unless you want them.
+# Building the Front-end
+
+Below is a **step-by-step, guide** for building the front-end (both **Consumer** and **Creator** views) for your cloud-native photo/video sharing application. The goal is to keep it as straightforward as possible, using **basic HTML, CSS, and JavaScript**—so you don’t need a deep technical background or complicated frameworks unless you want them. The steps and code are only a guide and not a direct and complete solution. 
 
 ---
 
@@ -411,4 +413,4 @@ By following these steps, you’ll have:
 4. **Deployment**:
    - A live website on Azure (either via **Static Web Apps** or your **App Service**).
 
-Congratulations! You now have a front-end that interacts with your REST API, storing data in Azure’s database and media in Blob Storage. Your next steps might involve **scalability, optimization, or final polishing** before presentation or production.
+Congratulations! You now have a front-end that interacts with your REST API, storing data in Azure’s database and media in Blob Storage. 
