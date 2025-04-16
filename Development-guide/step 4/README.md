@@ -1,6 +1,6 @@
 # implementation of Authentication and Authorization
 
-Below is a **step-by-step, beginner-friendly guide** to implement **Authentication (Auth)** and **Authorization** in your application using **Azure AD B2C** (Business-to-Consumer). This will ensure that only the right users (e.g., “creator” vs. “consumer”) can access or modify certain features, like uploading media or commenting.
+Below is a **step-by-step, guide** to implement **Authentication (Auth)** and **Authorization** in your application using **Azure AD B2C** (Business-to-Consumer). This will ensure that only the right users (e.g., “creator” vs. “consumer”) can access or modify certain features, like uploading media or commenting.
 
 ---
 
