@@ -73,3 +73,67 @@ If you have a separate front-end that handles user sign-in (e.g., a React app, o
 When done, you’ll see a **Policy Name** (like `B2C_1_SignUpSignIn`). This is important for your front-end or back-end to initiate user flows.
 
 ---
+
+
+## Part D: **Integrate B2C Authentication in Your Back-End**
+
+The simplest approach is to **validate tokens** (JWTs) in your API’s request headers. When a user logs in via your B2C sign-in page (initiated by your front-end), they’ll receive a JWT. That token is then sent in the **Authorization** header (e.g., `Bearer <token>`) for each request to your API.
+
+### Node.js / Express Example
+
+1. **Install `passport-azure-ad`**:
+   ```bash
+   npm install passport passport-azure-ad
+   ```
+2. **Configure a Bearer Strategy** in your back-end:
+   ```js
+   // auth.js
+   const passport = require('passport');
+   const BearerStrategy = require('passport-azure-ad').BearerStrategy;
+
+   const options = {
+     identityMetadata: `https://<your-tenant-name>.b2clogin.com/<your-tenant-name>.onmicrosoft.com/<your-policy>/v2.0/.well-known/openid-configuration`,
+     clientID: '<CLIENT_ID_OF_YOUR_API>',
+     // 'B2C_1_SignUpSignIn' or your user flow/policy name
+     policyName: '<YOUR_POLICY_NAME>',
+     isB2C: true,
+     validateIssuer: true,
+     loggingLevel: 'info',
+     passReqToCallback: false
+   };
+
+   passport.use(new BearerStrategy(options, (token, done) => {
+     // This function is called after token is validated
+     // token contains user info
+     done(null, token);
+   }));
+
+   module.exports = passport;
+   ```
+   - Replace `<your-tenant-name>` with your domain, like `my-mediaapp-b2c`.  
+   - `<CLIENT_ID_OF_YOUR_API>` is from your API registration in B2C.  
+   - `<YOUR_POLICY_NAME>` is something like `B2C_1_SignUpSignIn`.
+
+3. **Use the Strategy in Your Express App**:
+   ```js
+   // index.js or app.js
+   const express = require('express');
+   const passport = require('./auth'); // the file where we set up BearerStrategy
+   const app = express();
+   app.use(passport.initialize());
+
+   // A protected route example
+   app.get('/api/protected', 
+     passport.authenticate('oauth-bearer', { session: false }),
+     (req, res) => {
+       // If we're here, the token is valid
+       res.send('You are authenticated!');
+     }
+   );
+   ```
+4. **Test**:
+   - You’ll need a valid **Bearer token** from logging in through your B2C user flow.  
+   - If you’re testing manually, you can create your own front-end or a tool like **Postman** to get the token from B2C.  
+   - When you include `Authorization: Bearer <token>` in the header and call `/api/protected`, you should see `"You are authenticated!"`.
+
+---
